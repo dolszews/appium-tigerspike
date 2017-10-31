@@ -2,11 +2,6 @@ import io.appium.java_client.tigerSpike.TigerSpikeMainPage;
 import org.junit.Assert;
 
 public class tigerspikeCookieBar {
-    @cucumber.api.java.en.Given("^I open tigerspike webpage$")
-    public void iOpenTigerspikeWebpage() {
-        tigerSpikeMainPage = new TigerSpikeMainPage(driver);
-        driver.get(tigerSpikeMainPage.getUrl());
-    }
 
     @cucumber.api.java.en.Then("^I verify Cookie Bar is displayed")
     public void iVerifyCookieBarIsDisplayed() {

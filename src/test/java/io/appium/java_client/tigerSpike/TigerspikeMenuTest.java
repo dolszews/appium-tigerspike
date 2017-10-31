@@ -71,7 +71,6 @@ public class TigerspikeMenuTest {
         Assert.assertTrue("Global menu not displayed", navigationBar.isGlobalMenuDisplayed());
 
         List<String> menuList = navigationBar.getGlobalMenuNamesList();
-        System.out.println("!!!!!!!!!!!!!!" + menuList);
         Assert.assertThat("Global Menu list does not match target: " + globalMenuTargetList ,menuList,is(globalMenuTargetList));
     }
 }
