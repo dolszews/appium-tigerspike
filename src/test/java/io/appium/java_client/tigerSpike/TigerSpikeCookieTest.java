@@ -36,6 +36,7 @@ public class TigerSpikeCookieTest {
     private WebDriver driver;
     TigerSpikeMainPage tigerSpikeMainPage;
     private AppiumDriverLocalService service;
+
     /**
      * The setting up.
      */
@@ -43,7 +44,6 @@ public class TigerSpikeCookieTest {
     public void setUp() throws Exception {
         service = AppiumDriverLocalService.buildDefaultService();
         service.start();
-
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");

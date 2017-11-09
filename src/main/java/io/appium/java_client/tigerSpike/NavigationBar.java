@@ -13,7 +13,7 @@ public class NavigationBar {
 
     private WebDriver driver;
     private static By tigerSpikeGlobalMenuId = By.id("menu-tigerspike-global-menu");
-    private static By navigationBarMenuSelector = By.cssSelector("div.mobile-menu-button.mobile-menu-button-light.lines-button.x2");
+    private static By navigationBarMenuSelector = By.cssSelector("div.mobile-menu-button-light.lines-button.x2");
     private static By globalMenuItemsSelector = By.cssSelector("ul#menu-tigerspike-global-menu a");
 
     public NavigationBar(WebDriver driver) {
@@ -24,6 +24,9 @@ public class NavigationBar {
         return driver.findElement(navigationBarMenuSelector);
     }
 
+    /**
+     * Click on Global Menu Icon.
+     */
     public void clickGlobalMenuIcon() {
         getMenuBarWebElement().click();
         WebDriverWait wait = new WebDriverWait(driver, 3000);
@@ -42,6 +45,9 @@ public class NavigationBar {
         return driver.findElements(globalMenuItemsSelector);
     }
 
+    /**
+     * Get Global Menu Names list.
+     */
     public List<String> getGlobalMenuNamesList() {
         Iterator<WebElement> itr = getGlobalMenuWebElementsList().iterator();
         List<String> menuLabels = new ArrayList();

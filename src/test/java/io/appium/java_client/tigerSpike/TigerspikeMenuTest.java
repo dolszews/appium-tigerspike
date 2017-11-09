@@ -26,6 +26,7 @@ public class TigerspikeMenuTest {
     TigerSpikeMainPage tigerSpikeMainPage;
     private AppiumDriverLocalService service;
     private List<String> globalMenuTargetList = Arrays.asList("ABOUT", "OUR WAY", "WORK", "BLOG", "JOIN US", "CONTACT");
+
     /**
      * The setting up.
      */
@@ -71,6 +72,7 @@ public class TigerspikeMenuTest {
         Assert.assertTrue("Global menu not displayed", navigationBar.isGlobalMenuDisplayed());
 
         List<String> menuList = navigationBar.getGlobalMenuNamesList();
-        Assert.assertThat("Global Menu list does not match target: " + globalMenuTargetList ,menuList,is(globalMenuTargetList));
+        Assert.assertThat("Global Menu list does not match target: "
+                + globalMenuTargetList ,menuList,is(globalMenuTargetList));
     }
 }
