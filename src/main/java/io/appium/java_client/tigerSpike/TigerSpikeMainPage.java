@@ -1,5 +1,6 @@
 package io.appium.java_client.tigerSpike;
 
+import io.appium.java_client.utils.WebUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,7 +14,7 @@ public class TigerSpikeMainPage {
     private WebDriver driver;
     private static By cookieBarId = By.id("catapult-cookie-bar");
     private static By cookieBarOkayButtonId = By.id("catapultCookie");
-    private static By tigerspikeGlobalMenuId = By.id("menu-tigerspike-global-menu");
+    private static By footerMenuSelector = By.cssSelector("div.footerism.vc_custom_1500631604176 h2 a");
 
     public TigerSpikeMainPage(WebDriver driver) {
         this.driver = driver;
@@ -41,7 +42,13 @@ public class TigerSpikeMainPage {
         wait.until(ExpectedConditions.invisibilityOf(getCookieBarWebElement()));
     }
 
-    private WebElement getTigerspikeGlobalMenuWebElement() {
-        return driver.findElement(tigerspikeGlobalMenuId);
+    private void scrollToFooterMenu() {
+        new WebUtils(driver).scrollElementIntoView(driver.findElement(footerMenuSelector));
+    }
+
+    public TigerSpikeContactPage clickFooterMenuItem(String menuItemToClick) {
+        scrollToFooterMenu();
+        driver.findElement(By.xpath("//a[contains(text(),\"" + menuItemToClick + "\")]")).click();
+        return new TigerSpikeContactPage(driver);
     }
 }
