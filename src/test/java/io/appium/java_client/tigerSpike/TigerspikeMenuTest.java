@@ -73,6 +73,6 @@ public class TigerspikeMenuTest {
 
         List<String> menuList = navigationBar.getGlobalMenuNamesList();
         Assert.assertThat("Global Menu list does not match target: "
-                + globalMenuTargetList ,menuList,is(globalMenuTargetList));
+                + globalMenuTargetList, menuList, is(globalMenuTargetList));
     }
 }

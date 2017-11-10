@@ -65,6 +65,7 @@ public class OfficesListTest {
         Assert.assertEquals("contact page was not opened", tigerSpikeContactPage.getUrl(), driver.getCurrentUrl());
 
         tigerSpikeContactPage.getNumberOfOficeLocations();
-        Assert.assertEquals("Office number is not as expected: " + officesNumber, officesNumber, tigerSpikeContactPage.getNumberOfOficeLocations());
+        Assert.assertEquals("Office number is not as expected: " + officesNumber,
+                officesNumber, tigerSpikeContactPage.getNumberOfOficeLocations());
     }
 }
