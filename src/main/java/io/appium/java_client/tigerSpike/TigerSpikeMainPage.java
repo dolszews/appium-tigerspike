@@ -46,6 +46,11 @@ public class TigerSpikeMainPage {
         new WebUtils(driver).scrollElementIntoView(driver.findElement(footerMenuSelector));
     }
 
+    /**
+     * Click on defined menu item.
+     * @param menuItemToClick - title of menu item.
+     * @return TigerSpikeContactPage
+     */
     public TigerSpikeContactPage clickFooterMenuItem(String menuItemToClick) {
         scrollToFooterMenu();
         driver.findElement(By.xpath("//a[contains(text(),\"" + menuItemToClick + "\")]")).click();

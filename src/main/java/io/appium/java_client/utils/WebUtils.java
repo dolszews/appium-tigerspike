@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 
 public class WebUtils {
     private WebDriver driver;
+
     public WebUtils(WebDriver driver) {
         this.driver = driver;
     }

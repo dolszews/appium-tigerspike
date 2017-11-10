@@ -23,7 +23,7 @@ public class TigerSpikeContactPage {
         return driver.findElements(officesHeaderSelector);
     }
 
-    public int getNumberOfOficeLocations(){
+    public int getNumberOfOficeLocations() {
         return getOfficesNamesWebElementsList().size();
     }
 }
