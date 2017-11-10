@@ -1,4 +1,4 @@
-Feature: Menu
+Feature: Global Menu
 
   Scenario: Validate Global Menu content
     Given I open tigerspike webpage
