@@ -1,12 +1,14 @@
 package stepdefs;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.appium.java_client.tigerSpike.TigerSpikeMainPage;
 import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
 
 public class CookieBarSteps {
+
+    private WebDriver driver;
     TigerSpikeMainPage tigerSpikeMainPage = new TigerSpikeMainPage(driver);
 
     @When("^I dismiss Cookie Bar$")

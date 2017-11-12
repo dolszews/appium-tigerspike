@@ -1,19 +1,18 @@
 package stepdefs;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import io.appium.java_client.tigerSpike.TigerSpikeMainPage;
+import io.appium.java_client.tigerSpike.TigerSpikeContactPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 public class ContactPageSteps {
 
     private WebDriver driver;
-    TigerSpikeMainPage tigerSpikeMainPage = new TigerSpikeMainPage(driver);
+    TigerSpikeContactPage tigerSpikeContactPage = new TigerSpikeContactPage(driver);
 
     @Then("^I verify Contacts page is opened$")
-    public void iVerifyContactsPageIsOpened()  {
+    public void iVerifyContactsPageIsOpened() {
         Assert.assertEquals("contact page was not opened", tigerSpikeContactPage.getUrl(), driver.getCurrentUrl());
     }
 

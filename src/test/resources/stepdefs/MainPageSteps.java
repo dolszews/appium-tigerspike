@@ -5,17 +5,25 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.remote.MobileBrowserType;
+import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.tigerSpike.TigerSpikeContactPage;
 import io.appium.java_client.tigerSpike.TigerSpikeMainPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.concurrent.TimeUnit;
 
 public class MainPageSteps {
     DesiredCapabilities capabilities;
     private WebDriver driver;
     TigerSpikeMainPage tigerSpikeMainPage;
     private AppiumDriverLocalService service;
+    TigerSpikeContactPage tigerSpikeContactPage;
 
     @Given("^I open tigerspike webpage$")
     public void iOpenTigerspikeWebpage() {
